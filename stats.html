@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stats</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header><h1>📊 Alert Stats</h1></header>
+  <main><canvas id="statsChart" height="150"></canvas></main>
+  <script>
+    const ctx = document.getElementById('statsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Emergency', 'Normal'],
+        datasets: [{
+          data: [5, 15],
+          backgroundColor: ['#dc3545', '#0d6efd']
+        }]
+      },
+      options: {responsive: true, plugins: {legend: {position: 'bottom'}}}
+    });
+  </script>
+</body>
+</html>

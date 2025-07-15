@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSAS Mobile App</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>📢 CSAS Mobile</h1></header>
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="subscribe.html">📲 Subscribe</a>
+    <a href="alerts.html">📡 Alerts</a>
+    <a href="stats.html">📊 Stats</a>
+  </nav>
+  <main>
+    <h2>Welcome to CSAS</h2>
+    <p>Get updates and emergency alerts in your area.</p>
+  </main>
+  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }</script>
+</body>
+</html>

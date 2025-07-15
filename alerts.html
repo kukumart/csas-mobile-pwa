@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Alerts</title><link rel="stylesheet" href="style.css" /></head>
+<body>
+<header><h1>📡 Alerts</h1></header>
+<main><ul id="alertsList"></ul></main>
+<script>
+fetch("https://your-site.com/wp-json/wp/v2/csas_alert?per_page=10")
+.then(res => res.json())
+.then(data => {
+  const list = document.getElementById("alertsList");
+  data.forEach(alert => {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${alert.title.rendered}</strong><br>${alert.content.rendered}`;
+    list.appendChild(li);
+  });
+});
+</script>
+</body>
+</html>
